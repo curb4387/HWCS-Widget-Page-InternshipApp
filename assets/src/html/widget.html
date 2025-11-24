@@ -62,7 +62,7 @@
       </div>
       <div>
         <img id="" src="../../widget-page/myBox-image.png" alt="Picture of example
-          variable box named myBox">
+          variable box named myBox"></img>
       </div>
       <div class="text">
         <p>But there isn't anything stored in it right now.<br>How about we
@@ -81,20 +81,17 @@
     <!-- Example section part 2 -->
      <section>
       <div class="text">
-        <p>Drag and drop the .. into the box.</p>
+        <p>Drag and drop the can into the box.</p>
       </div>
 
-      <div class="widget arrange-code-widget">
-        <div class="code-container">
-          <div class="block-container" data-index="2" draggable="true">
-            <img class="block" src="../../introduction-to-programming/character-say-oh-no.png"></img>
+      <div style="margin: 1.5rem;">
+        <div class="code-container" style="position: relative;">
+          <div data-index="2" draggable="true">
+            <img id="can-drag" src="../../widget-page/can5-image.png"></img>
           </div>
-          <div class="block-container" data-index="0" draggable="true">
-            <img class="block" src="../../introduction-to-programming/set-animation-of-character-to-run.png"></img>
-          </div>
-          <div class="block-container" data-index="1" draggable="true">
-            <img class="block"
-              src="../../introduction-to-programming/move-character-1-meter-forward-in-1-second.png"></img>
+          <div data-index="0" draggable="false">
+            <img id="box-drag" src="../../widget-page/myBox-image.png" alt="Picture of example
+              variable box named myBox"></img>
           </div>
         </div>
       </div>
@@ -109,6 +106,31 @@
       const widgetPage = new WidgetPage("widget-page-template", document.body);
       widgetPage.registerWidget(".arrange-code-widget", ArrangeCodeWidget);
     });
+
+    // Drag first element (can) onto second element (box)
+    const img1 = document.getElementById("can-drag");
+    const img2 = document.getElementById("box-drag");
+
+    // Allow can image to drag
+    img1.addEventListener("dragstart", function (event) {
+      event.dataTransfer.setData("text/plain", "image1");
+    });
+    // Allow box image to have can image dropped onto it
+    img2.addEventListener("dragover", function (event) {
+      event.preventDefault();
+    });
+    img2.addEventListener("drop", function (event) {
+      event.preventDefault();
+
+      const data = event.dataTransfer.getData("text/plain");
+
+      if (data == "image1") {
+        img1.style.position = "absolute";
+        img1.style.left = img2.offsetLeft + 120 + "px";
+        img1.style.top = img2.offsetTop - 40 + "px";
+      }
+    });
+
   </script>
 </body>
 
