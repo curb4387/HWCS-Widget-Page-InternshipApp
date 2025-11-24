@@ -19,16 +19,6 @@
 </head>
 
 <body>
-  <script type="module">
-    import { WidgetPage } from "../js/WidgetPage.js";
-    import { ArrangeCodeWidget } from "../js/ArrangeCodeWidget.js";
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const widgetPage = new WidgetPage("widget-page-template", document.body);
-      widgetPage.registerWidget(".arrange-code-widget", ArrangeCodeWidget);
-    });
-  </script>
-  
   <div class="column column-md">
     <!-- Title and intro section -->
     <section>
@@ -111,6 +101,15 @@
      </section>
   </div>
 
+  <script type="module">
+    import { WidgetPage } from "../js/WidgetPage.js";
+    import { ArrangeCodeWidget } from "../js/ArrangeCodeWidget.js";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const widgetPage = new WidgetPage("widget-page-template", document.body);
+      widgetPage.registerWidget(".arrange-code-widget", ArrangeCodeWidget);
+    });
+  </script>
 </body>
 
 </html>
