@@ -28,13 +28,7 @@
           <br>But what are variables?</p>
       </div>
 
-      <button class="button-semantic button-primary button-continue">
-        <span class="button-text">Continue</span>
-        <svg class="button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 8L14.59 6.59L9 12.17V0H7V12.17L1.42 6.58L0 8L8 16L16 8Z" fill="white" />
-        </svg>
-      </button>
+      <button class="button-semantic button-primary button-continue continue"></button>
     </section>
 
     <!-- Definition section -->
@@ -45,13 +39,7 @@
         </p>
       </div>
 
-      <button class="button-semantic button-primary button-continue">
-        <span class="button-text">Continue</span>
-        <svg class="button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 8L14.59 6.59L9 12.17V0H7V12.17L1.42 6.58L0 8L8 16L16 8Z" fill="white" />
-        </svg>
-      </button>
+      <button class="button-semantic button-primary button-continue continue"></button>
     </section>
 
     <!-- Example section part 1 -->
@@ -68,13 +56,7 @@
           add something to it?</p>
       </div>
 
-      <button class="button-semantic button-primary button-continue">
-        <span class="button-text">Continue</span>
-        <svg class="button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 8L14.59 6.59L9 12.17V0H7V12.17L1.42 6.58L0 8L8 16L16 8Z" fill="white" />
-        </svg>
-      </button>
+      <button class="button-semantic button-primary button-continue continue"></button>
     </section>
 
     <!-- Example section part 2 -->
@@ -102,13 +84,7 @@
         </div>
       </div>
 
-      <button class="button-semantic button-primary button-continue">
-        <span class="button-text">Continue</span>
-        <svg class="button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 8L14.59 6.59L9 12.17V0H7V12.17L1.42 6.58L0 8L8 16L16 8Z" fill="white" />
-        </svg>
-      </button>
+      <button class="button-semantic button-primary button-continue continue"></button>
     </section>
 
     <!-- Change value inside the variable -->
@@ -144,13 +120,7 @@
         </div>
       </div>
 
-      <button class="button-semantic button-primary button-continue">
-        <span class="button-text">Continue</span>
-        <svg class="button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 8L14.59 6.59L9 12.17V0H7V12.17L1.42 6.58L0 8L8 16L16 8Z" fill="white" />
-        </svg>
-      </button>
+      <button class="button-semantic button-primary button-continue continue"></button>
     </section>
 
     <!-- Conclusion sectoin -->
@@ -235,6 +205,17 @@
           imgCorrect.celebrate();
           feedback2.style.display = "block";
         }
+      });
+
+      // Add Continue buttons
+      document.querySelectorAll(".continue").forEach(btn => {
+        btn.innerHTML = `
+          <span class="button-text">Continue</span>
+          <svg class="button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8L14.59 6.59L9 12.17V0H7V12.17L1.42 6.58L0 8L8 16L16 8Z" fill="white" />
+          </svg>
+        `;
       });
     });
   </script>
