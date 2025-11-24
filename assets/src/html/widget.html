@@ -15,14 +15,17 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/widget-page.css">
+  <link rel="stylesheet" href="../css/arrange-code-widget.css">
 </head>
 
 <body>
   <script type="module">
     import { WidgetPage } from "../js/WidgetPage.js";
+    import { ArrangeCodeWidget } from "../js/ArrangeCodeWidget.js";
 
     document.addEventListener("DOMContentLoaded", () => {
       const widgetPage = new WidgetPage("widget-page-template", document.body);
+      widgetPage.registerWidget(".arrange-code-widget", ArrangeCodeWidget);
     });
   </script>
   
@@ -62,15 +65,50 @@
       </button>
     </section>
 
-    <!-- Example section -->
+    <!-- Example section part 1 -->
     <section>
       <div class="text">
-        <p>Let's take a look at our box.</p>
+        <p>Here is our box labeled myBox.</p>
       </div>
-      <div class="">
-        
+      <div>
+        <img id="" src="../../widget-page/myBox-image.png" alt="Picture of example
+          variable box named myBox">
       </div>
+      <div class="text">
+        <p>But there isn't anything stored in it right now.<br>How about we
+          add something to it?</p>
+      </div>
+
+      <button class="button-semantic button-primary button-continue">
+        <span class="button-text">Continue</span>
+        <svg class="button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 8L14.59 6.59L9 12.17V0H7V12.17L1.42 6.58L0 8L8 16L16 8Z" fill="white" />
+        </svg>
+      </button>
     </section>
+
+    <!-- Example section part 2 -->
+     <section>
+      <div class="text">
+        <p>Drag and drop the .. into the box.</p>
+      </div>
+
+      <div class="widget arrange-code-widget">
+        <div class="code-container">
+          <div class="block-container" data-index="2" draggable="true">
+            <img class="block" src="../../introduction-to-programming/character-say-oh-no.png"></img>
+          </div>
+          <div class="block-container" data-index="0" draggable="true">
+            <img class="block" src="../../introduction-to-programming/set-animation-of-character-to-run.png"></img>
+          </div>
+          <div class="block-container" data-index="1" draggable="true">
+            <img class="block"
+              src="../../introduction-to-programming/move-character-1-meter-forward-in-1-second.png"></img>
+          </div>
+        </div>
+      </div>
+     </section>
   </div>
 
 </body>
