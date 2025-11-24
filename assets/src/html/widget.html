@@ -24,10 +24,9 @@
     <section>
       <div class="text">
         <h1>Working with Variables</h1>
-        <p>One very important part to all programming languages is <b>variables</b>.
+        <p>One very important part to programming is <b>variables</b>.
           <br>But what are variables?</p>
       </div>
-
       <button class="button-semantic button-primary button-continue continue"></button>
     </section>
 
@@ -35,27 +34,24 @@
     <section>
       <div class="text">
         <p>A <b>variable</b> is like a labeled box that you can put information into.</p>
-        <p>It can store different things, like numbers or words, that can be used later.
-        </p>
+        <p>It can store different things, like numbers or words, that can be used later.</p>
       </div>
-
       <button class="button-semantic button-primary button-continue continue"></button>
     </section>
 
     <!-- Example section part 1 -->
     <section>
       <div class="text">
-        <p>Here is our box labeled <span style="color: #5C71F2FF">myBox</span>:</p>
+        <p>Here is our box labeled <span style="color: var(--purple-600);">myBox</span>:</p>
       </div>
       <div>
-        <img id="" src="../../widget-page/myBox-image.png" alt="Picture of example
+        <img class="image" src="../../widget-page/myBox-image.png" alt="Picture of example
           variable box named myBox"></img>
       </div>
       <div class="text">
         <p>But there isn't anything <b>stored</b> in it right now.<br>How about we
           add something to it?</p>
       </div>
-
       <button class="button-semantic button-primary button-continue continue"></button>
     </section>
 
@@ -63,27 +59,25 @@
     <section>
       <div class="text">
         <h1>Giving a Variable a Value</h1>
-        <p>Drag and drop the can into the <span style="color: #5C71F2FF">myBox</span> box.</p>
+        <p>Drag and drop the can into the <span style="color: var(--purple-600);">myBox</span> box.</p>
       </div>
-
       <!-- Drag and drop value into the variable -->
       <div style="margin: 1.5rem;">
         <div class="code-container" style="position: relative;">
           <div draggable="true">
-            <img id="can-drag" src="../../widget-page/can5-image.png" alt="Picture of example
+            <img id="can-drag" class="image" style="width: auto; height: auto;" src="../../widget-page/can5-image.png" alt="Picture of example
               can with the number 5"></img>
           </div>
           <div draggable="false">
-            <img id="box-drag" src="../../widget-page/myBox-image.png" alt="Picture of example
+            <img id="box-drag" class="image" src="../../widget-page/myBox-image.png" alt="Picture of example
               variable box named myBox"></img>
           </div>
         </div>
         <div class="feedback" style="display: none; position: absolute;">
-          <strong>Great!</strong> Now <span style="color: #5C71F2FF">myBox</span> stores the value
-            <span style="color: #36B5BFFF">5</span>.
+          <strong>Great!</strong> Now <span style="color: var(--purple-600);">myBox</span> stores the value
+            <span style="color: var(--teal-500);">5</span>.
         </div>
       </div>
-
       <button class="button-semantic button-primary button-continue continue"></button>
     </section>
 
@@ -92,43 +86,40 @@
       <div class="text">
         <h1>Changing the Value of a Variable</h1>
         <p>The value a variable is storing can be <b>changed</b> when you want it to.</p>
-        <p>What if we want <span style="color: #5C71F2FF">myBox</span> to store <span style="color: #36B5BFFF">10</span>
-          instead of <span style="color: #36B5BFFF">5</span>?</p>
-        <p>We can do that by <b>replacing</b> <span style="color: #36B5BFFF">5</span> with
-          <span style="color: #36B5BFFF">10</span>!</p>
+        <p>What if we want <span style="color: var(--purple-600);">myBox</span> to store <span style="color: var(--teal-500);">10</span>
+          instead of <span style="color: var(--teal-500);">5</span>?</p>
+        <p>We can do that by <b>replacing</b> <span style="color: var(--teal-500);">5</span> with
+          <span style="color: var(--teal-500);">10</span>!</p>
       </div>
-
       <!-- Drag and drop images -->
       <div style="margin: 1.5rem;">
         <div class="code-container" style="position: relative;">
           <div draggable="false">
-            <img id="can5-drag" style="z-index: 1;" src="../../widget-page/can5-image.png" alt="Picture of example
+            <img id="can5-drag" class="image" style="z-index: 1; width: auto; height: auto;" src="../../widget-page/can5-image.png" alt="Picture of example
               can with the number 5"></img>
           </div>
           <div draggable="true">
-            <img id="can10-drag" style="z-index: 10;" src="../../widget-page/can10-image.png" alt="Picture of example
+            <img id="can10-drag" class="image" style="z-index: 10; width: auto; height: auto;" src="../../widget-page/can10-image.png" alt="Picture of example
               can with the number 10"></img>
           </div>
           <div draggable="false">
-            <img id="box-drag2" style="z-index: 1;" src="../../widget-page/myBox-image.png" alt="Picture of example
+            <img id="box-drag2" class="image" style="z-index: 1;" src="../../widget-page/myBox-image.png" alt="Picture of example
               variable box named myBox"></img>
           </div>
         </div>
         <div class="feedback2" style="display: none; position: absolute;">
-          <strong>Awesome!</strong> Now <span style="color: #5C71F2FF">myBox</span> stores the value
-          <span style="color: #36B5BFFF">10</span> instead of <span style="color: #36B5BFFF">5</span>.
+          <strong>Awesome!</strong> Now <span style="color: var(--purple-600);">myBox</span> stores the value
+          <span style="color: var(--teal-500);">10</span> instead of <span style="color: var(--teal-500);">5</span>.
         </div>
       </div>
-
       <button class="button-semantic button-primary button-continue continue"></button>
     </section>
 
-    <!-- Conclusion sectoin -->
+    <!-- Conclusion section -->
     <section>
       <div class="text">
         <h1>Conclusion</h1>
-        <p>Great work! You learned about variables, how to put something inside it,
-          and how to change it.</p>
+        <p>Great work! You learned about variables, how to put something inside it, and how to change it.</p>
       </div>
     </section>
   </div>
@@ -140,82 +131,53 @@
     document.addEventListener("DOMContentLoaded", () => {
       const widgetPage = new WidgetPage("widget-page-template", document.body);
       widgetPage.registerWidget(".arrange-code-widget", ArrangeCodeWidget);
-
-      // Drag first element (can) onto second element (box)
-      const img1 = document.getElementById("can-drag");
-      const img2 = document.getElementById("box-drag");
-      const imgCorrect = widgetPage;
-      const feedback = document.querySelector(".feedback");
-
-      // Allow can image to drag
-      img1.addEventListener("dragstart", (event) => {
-        event.dataTransfer.setData("text/plain", "image1");
-      });
-
-      // Allow box image to have can image dropped onto it
-      img2.addEventListener("dragover", (event) => {
-        event.preventDefault();
-      });
-      img2.addEventListener("drop", (event) => {
-        event.preventDefault();
-
-        const data = event.dataTransfer.getData("text/plain");
-
-        if (data == "image1") {
-          img1.style.position = "absolute";
-          img1.style.left = img2.offsetLeft + 120 + "px";
-          img1.style.top = img2.offsetTop - 40 + "px";
-          imgCorrect.playCorrectSound();
-          imgCorrect.celebrate();
-          feedback.style.display = "block";
-        }
-      });
-
-
-      // Drag can 5 out and can 10 into myBox
-      const change1 = document.getElementById("can5-drag");
-      const change2 = document.getElementById("can10-drag");
-      const change3 = document.getElementById("box-drag2");
-      const feedback2 = document.querySelector(".feedback2");
-
-      change1.style.position = "absolute";
-      change1.style.left = change3.offsetLeft + 120 + "px";
-      change1.style.top = change3.offsetTop + 50 + "px";
-      change1.style.pointerEvents = "none";
-
-      // Allow can10 image to drag
-      change2.addEventListener("dragstart", (event) => {
-        event.dataTransfer.setData("text/plain", "image2");
-      });
-
-      change3.addEventListener("dragover", (event) => {
-        event.preventDefault();
-      });
-      change3.addEventListener("drop", (event) => {
-        event.preventDefault();
-
-        const data = event.dataTransfer.getData("text/plain");
-
-        if (data == "image2") {
-          change1.style.display = "none";
-          change2.style.position = "absolute";
-          change2.style.left = change3.offsetLeft + 120 + "px";
-          change2.style.top = change3.offsetTop - 40 + "px";
-          imgCorrect.playCorrectSound();
-          imgCorrect.celebrate();
-          feedback2.style.display = "block";
-        }
-      });
-
       // Add Continue buttons
       document.querySelectorAll(".continue").forEach(btn => {
-        btn.innerHTML = `
-          <span class="button-text">Continue</span>
+        btn.innerHTML = ` <span class="button-text">Continue</span>
           <svg class="button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M16 8L14.59 6.59L9 12.17V0H7V12.17L1.42 6.58L0 8L8 16L16 8Z" fill="white" />
-          </svg>
-        `;
+          </svg> `;
+      });
+      // Function to drag and drop images
+      const imgCorrect = widgetPage;
+      function setupDragDrop(dragId, dropId, feedbackSelector, onDropCallback) {
+        const dragImg = document.getElementById(dragId);
+        const dropImg = document.getElementById(dropId);
+        const feedback = document.querySelector(feedbackSelector);
+
+        dragImg.addEventListener("dragstart", e => { e.dataTransfer.setData("text/plain", dragId); });
+
+        dropImg.addEventListener("dragover", e => { e.preventDefault(); });
+        dropImg.addEventListener("drop", e => {
+          e.preventDefault();
+          const data = event.dataTransfer.getData("text/plain");
+          if (data === dragId) {
+            dragImg.style.position = "absolute";
+            dragImg.style.left = dropImg.offsetLeft + 120 + "px";
+            dragImg.style.top = dropImg.offsetTop - 40 + "px";
+            imgCorrect.playCorrectSound();
+            imgCorrect.celebrate();
+            feedback.style.display = "block";
+            if (onDropCallback) { onDropCallback(); }
+          }
+        });
+      }
+      // First Drag and Drop example
+      setupDragDrop("can-drag", "box-drag", ".feedback", () => {
+        const can = document.getElementById("can-drag");
+        const box = document.getElementById("box-drag");
+      });
+      // Second Drag and Drop example
+      const box2 = document.getElementById("box-drag2");
+      const can5 = document.getElementById("can5-drag");
+      can5.style.position = "absolute";
+      can5.style.left = box2.offsetLeft + 120 + "px";
+      can5.style.top = box2.offsetTop + 70 + "px";
+      can5.style.pointerEvents = "none";
+      setupDragDrop("can10-drag", "box-drag2", ".feedback2", () => {
+        const can10 = document.getElementById("can10-drag");
+        can5.style.display = "none";
       });
     });
   </script>
