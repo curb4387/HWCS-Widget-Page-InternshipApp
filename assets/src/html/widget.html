@@ -97,6 +97,9 @@
               variable box named myBox"></img>
           </div>
         </div>
+        <div class="feedback" style="display: none; position: absolute;">
+          <strong>Great!</strong> Now myBox stores the value of 5.
+        </div>
       </div>
 
       <button class="button-semantic button-primary button-continue">
@@ -108,7 +111,7 @@
       </button>
     </section>
 
-    <!--  -->
+    <!-- Change value inside the variable -->
     <section>
 
     </section>
@@ -126,6 +129,7 @@
       const img1 = document.getElementById("can-drag");
       const img2 = document.getElementById("box-drag");
       const imgCorrect = widgetPage;
+      const feedback = document.querySelector(".feedback");
 
       // Allow can image to drag
       img1.addEventListener("dragstart", (event) => {
@@ -147,6 +151,7 @@
           img1.style.top = img2.offsetTop - 40 + "px";
           imgCorrect.playCorrectSound();
           imgCorrect.celebrate();
+          feedback.style.display = "block";
         }
       });
     });
