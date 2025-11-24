@@ -41,8 +41,7 @@
     <section>
       <div class="text">
         <p>A <b>variable</b> is like a labeled box that you can put information into.</p>
-        <p>It can store different things, like numbers or words, and can be
-          <b>changed</b> when you want it to.
+        <p>It can store different things, like numbers or words, that can be used later.
         </p>
       </div>
 
@@ -88,17 +87,17 @@
       <!-- Drag and drop value into the variable -->
       <div style="margin: 1.5rem;">
         <div class="code-container" style="position: relative;">
-          <div data-index="1" draggable="true">
+          <div draggable="true">
             <img id="can-drag" src="../../widget-page/can5-image.png" alt="Picture of example
-              variable value can with the number 5"></img>
+              can with the number 5"></img>
           </div>
-          <div data-index="0" draggable="false">
+          <div draggable="false">
             <img id="box-drag" src="../../widget-page/myBox-image.png" alt="Picture of example
               variable box named myBox"></img>
           </div>
         </div>
         <div class="feedback" style="display: none; position: absolute;">
-          <strong>Great!</strong> Now myBox stores the value of 5.
+          <strong>Great!</strong> Now myBox stores the value 5.
         </div>
       </div>
 
@@ -113,7 +112,50 @@
 
     <!-- Change value inside the variable -->
     <section>
+      <div class="text">
+        <h1>Changing the Value of a Variable</h1>
+        <p>The value a variable is storing can be <b>changed</b> when you want it to.</p>
+        <p>What if we want myBox to store 10 instead of 5?</p>
+        <p>We can do that by replacing 5 with 10!</p>
+      </div>
 
+      <!-- Drag and drop images -->
+      <div style="margin: 1.5rem;">
+        <div class="code-container" style="position: relative;">
+          <div draggable="false">
+            <img id="can5-drag" style="z-index: 1;" src="../../widget-page/can5-image.png" alt="Picture of example
+              can with the number 5"></img>
+          </div>
+          <div draggable="true">
+            <img id="can10-drag" style="z-index: 10;" src="../../widget-page/can10-image.png" alt="Picture of example
+              can with the number 10"></img>
+          </div>
+          <div draggable="false">
+            <img id="box-drag2" style="z-index: 1;" src="../../widget-page/myBox-image.png" alt="Picture of example
+              variable box named myBox"></img>
+          </div>
+        </div>
+        <div class="feedback2" style="display: none; position: absolute;">
+          <strong>Awesome!</strong> Now myBox stores the value 10 instead of 5.
+        </div>
+      </div>
+
+      <button class="button-semantic button-primary button-continue">
+        <span class="button-text">Continue</span>
+        <svg class="button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 8L14.59 6.59L9 12.17V0H7V12.17L1.42 6.58L0 8L8 16L16 8Z" fill="white" />
+        </svg>
+      </button>
+    </section>
+
+    <!-- Conclusion sectoin -->
+    <section>
+      <div class="text">
+        <h1>Conclusion</h1>
+        <p>Great work! You learned about variables, how to put something inside it,
+          and how to change it.</p>
+      </div>
     </section>
   </div>
 
@@ -152,6 +194,42 @@
           imgCorrect.playCorrectSound();
           imgCorrect.celebrate();
           feedback.style.display = "block";
+        }
+      });
+
+
+      // Drag can 5 out and can 10 into myBox
+      const change1 = document.getElementById("can5-drag");
+      const change2 = document.getElementById("can10-drag");
+      const change3 = document.getElementById("box-drag2");
+      const feedback2 = document.querySelector(".feedback2");
+
+      change1.style.position = "absolute";
+      change1.style.left = change3.offsetLeft + 120 + "px";
+      change1.style.top = change3.offsetTop + 50 + "px";
+      change1.style.pointerEvents = "none";
+
+      // Allow can10 image to drag
+      change2.addEventListener("dragstart", (event) => {
+        event.dataTransfer.setData("text/plain", "image2");
+      });
+
+      change3.addEventListener("dragover", (event) => {
+        event.preventDefault();
+      });
+      change3.addEventListener("drop", (event) => {
+        event.preventDefault();
+
+        const data = event.dataTransfer.getData("text/plain");
+
+        if (data == "image2") {
+          change1.style.display = "none";
+          change2.style.position = "absolute";
+          change2.style.left = change3.offsetLeft + 120 + "px";
+          change2.style.top = change3.offsetTop - 40 + "px";
+          imgCorrect.playCorrectSound();
+          imgCorrect.celebrate();
+          feedback2.style.display = "block";
         }
       });
     });
